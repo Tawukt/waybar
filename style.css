@@ -1,0 +1,173 @@
+@import 'colors-waybar.css';
+
+* {
+    border: none;
+	border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+	font-weight: bold;
+}
+window#waybar {
+    background-color: transparent;
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: .5s;
+	border-radius: 0 0 16px 16px;
+}
+
+#mpris,
+#privacy,
+#bluetooth,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: @forground;
+}
+
+
+tooltip * {
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+}
+
+tooltip {
+    background-color: @color3;
+    color: @color8;
+	border-radius: 15px;
+}
+
+
+#left{
+    border-radius: 0 16px 16px 16px;
+    background-color: @color3;
+	margin-right: 20px;
+	padding-right: 40px;
+}
+#workspaces button label {
+    font-size: 18px;
+}
+#workspaces{
+	border-style: solid;
+	border-width: 0px;
+	border-color: @color3;
+	border-radius: 16px;
+	background-color: @background;
+		
+}
+#workspaces button {
+    background-color: transparent;
+	color: @foreground;
+	border-radius: 16px;
+}
+#workspaces button:hover {
+    background-color: transparent;
+
+}
+#workspaces button.active{
+	color: @background;
+    background-color: @color3;
+}
+
+
+#sound{
+    margin: 0 20px 0 20px;
+	background-color: @background;
+	border-radius: 0 0 16px 16px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: @color3;
+}
+#connection{
+    margin: 0 20px 0 20px;
+	background-color: @background;
+	border-radius: 0 0 16px 16px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: @color3;
+}
+#right{
+    margin-left: 20px;
+	background-color: @color3;
+	border-radius: 16px 0 16px 16px;
+}
+#sys{
+    background-color: @background;
+	border-style: solid;
+	border-width: 2px;
+	border-color: @color3;
+	border-radius: 16px;
+}
+#custom-updates{
+    color: @background;
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+
+#window{
+    background-color: @color3;
+	border-radius: 0 16px 16px 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: @background;
+}
+window#waybar.empty #window{
+    background-color: transparent;
+}
+
+#mpris{
+    margin: 0 2px 0 2px;
+	background-color: @background;
+	border-radius: 0 0 16px 16px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: @color3;
+	min-width: 200px;
+	
+}
+#custom-arabe_clock {
+	font-size: 20px;
+	letter-spacing: 5px;
+	padding: 0 10px 0 10px;
+	border-radius: 0 0 16px 16px;
+	background-color: @background;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: @color3;
+
+}
+#custom-weather {
+	color: @background;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#pri_tray {
+    margin: 0 10px 0 10px;
+	background-color: @background;
+	border-radius: 0 0 16px 16px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: @color3;
+}
