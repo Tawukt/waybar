@@ -1,0 +1,202 @@
+{
+    "mode": "dock",
+    "start_hidden": false, //start the bar hidden
+    "exclusive": true, //not understood so default
+    "fixed-center": true, //true: always center, false: center of space remaining RL
+    "passthrought": false, //not understood so default
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true, //reload after modification
+
+	"hyprland/window":{
+			//"icon":true
+			"format": "{title}",
+			"separate-outputs": true
+	},
+	"hyprland/workspaces": {
+			"format": "{icon}",
+			"format-icons": {
+					"1": "١",
+					"2": "٢",
+					"3": "٣",
+					"4": "٤",
+					"5": "٥",
+					"6": "٦",
+					"7": "٧",
+					"8": "٨",
+					"9": "٩",
+					"10": "٠",
+					"11": "١١",
+					"12": "١٢",
+					"13": "١٣",
+					"14": "١٤",
+					"15": "١٥"
+					// "active"
+					// "empty"
+					// "special"
+			},
+			"sort-by-number": true,
+			"show-special": false,
+			"disable-scroll": true
+    },
+	"custom/arabe_clock":{
+			"exec": "${XDG_CONFIG_HOME}/waybar/scripts/arabic_clock.sh",
+			//"interval": 1,
+			"return-type": "json",
+			"format": "{}",
+			"tooltip":true
+	},
+	"custom/weather":{
+			"exec": "${XDG_CONFIG_HOME}/waybar/scripts/get_weather.sh 0",
+    		"return-type": "json",
+    		"format": "{}",
+    		"tooltip": true,
+			"on-click": "${XDG_CONFIG_HOME}/waybar/scripts/get_weather.sh",
+			//"on-click": "${XDG_CONFIG_HOME}/waybar/scripts/get_weather.sh ${WEATHER_CITY}",
+			"on-click-right": "${XDG_CONFIG_HOME}/waybar/scripts/get_weather.sh w",
+    		"interval": 5 
+	},
+	"pulseaudio":{
+			"format": "{icon} {volume}%",
+			"format-muted": "󰝟",
+			"format-icons": {
+				"headphone": "",
+           		"hands-free": "",
+           		"headset": "",
+           		"phone": "",
+           		"portable": "",
+           		"car": "",
+           		"default": ["", "", ""]
+			},
+			"scroll-step": 5,
+			"on-click": "pavucontrol -t 3",
+			"tooltip": true,
+			"tooltip-format": "{desc}"
+	},	
+	"pulseaudio#micro":{
+			"format": "{format_source}",
+			"format-source": "󰍬",
+			"format-source-muted": "󰍭",
+			"scroll-step": 0,
+			"on-click": "pavucontrol -t 4"
+			// "on-click-middle"
+			// "on-click-right"
+	},
+	"network":{
+			"format-ethernet": "󰈀 {ifname}",
+			"format-wifi": "{icon} {ipaddr}/{cidr}",
+			"format-disconnected": "󰖪",
+			"tooltip-format-wifi": "SSID: {essid}\nInterface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}\nSubnet: {netmask}\nSignal strength: {signalStrength}%\n\n󰶣{bandwidthUpBytes} 󰶡{bandwidthDownBytes}",
+			"tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}\nSubnet: {netmask}\n\n {bandwidthUpBytes}\t {bandwidthDownBytes}",
+			"tooltip-format-disconnected": "Disconnected",
+			"format-icons": ["󰤫","󰤟","󰤢","󰤥","󰤨"],
+			"interval": 2
+
+			//"on-click": ""
+	},
+	"custom/wireguard":{
+		"format": "{}",
+		"exec": "${XDG_CONFIG_HOME}/waybar/scripts/wireguard.sh",
+		//"on-click": "rofi -modi 'WireGuard:~/.config/waybar/wireguard-rofi-waybar/wireguard-rofi.sh' -show WireGuard",
+		"interval": 60,
+		"return-type": "json"
+	},
+	"bluetooth":{
+			"format": "󰂯",
+			"format-disabled": "󰂲",
+			"format-off": "󰂲",
+			"format-on": "󰂯",
+			"format-connected": "󰂴 {num_connections}",
+			"on-click": "blueman-manager",
+			"tooltip": true,
+			"tooltip-format": "{controller_alias}\t{controller_address}",
+			"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+			"tooltip-format-enumerate-connected": "{device_alias",
+			"tooltip-format-enumerate-connected-battery": "{device_alias} - {device_battery_percentage}% 󰥆"
+	},
+	"custom/updates":{ //pacman update
+			"exec": "${XDG_CONFIG_HOME}/waybar/scripts/sysupdate.sh",
+    		"return-type": "json",
+    		"format": "{0}",
+    		"rotate": 0,
+    		"on-click": "${XDG_CONFIG_HOME}/waybar/scripts/sysupdate.sh up", 
+    		"interval": 86400,
+    		"tooltip": true,
+    		"signal": 20
+	},
+	"hyprland/submap":{
+			"format": "Submap: {}"
+	},
+    "mpris":{
+        "min-lenght": 20,
+        "max-lenght": 20,
+
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "dynamic-order": [
+            "title",
+            "artist"
+                    //"position",
+                    //"length"
+        ],
+        "title-len": 20,
+        "dynamic-len": 20,
+        "ellipsis": "...",
+            //"on-click": "play-pause",
+            //"on-click-middle": "previous track",
+            //"on-click-right": "next track",
+            "ignored-players": ["firefox"],
+
+            "tooltip": true,
+            "tooltip-format": "{title}\n{album}"
+    },
+	"group/sound":{
+			"modules": [
+					"pulseaudio",
+					"pulseaudio#micro"
+			],
+			"orientation": "horizontal"
+	},
+	"group/connection":{
+			"modules": [
+					"bluetooth",
+					"network",
+					"custom/wireguard"
+			],
+			"orientation": "horizontal"
+	},
+	"group/pri_tray":{
+			"modules": [
+					"tray",
+					"privacy"
+			],
+			"orientation": "horizontal"
+	},
+	"group/sys":{
+			"modules": [
+					"cpu",
+					"memory"
+			],
+			"orientation": "horizontal"
+	},
+    "modules-left": [
+        "group/left", //all about workspaces
+        "hyprland/submap"
+    ],
+    "modules-center": [
+        "custom/arabe_clock"
+    ],
+    "modules-right": [
+        "mpris",
+        "group/sound",
+        "group/connection",
+        "group/pri_tray",
+        "group/right"
+    ]
+}
