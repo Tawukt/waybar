@@ -2,17 +2,23 @@
 
 * {
     border: none;
-	border-radius: 0;
+    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 13px;
-	font-weight: bold;
+    font-weight: bold;
 }
+window.burj * {
+    font-size: 12px;
+}
+window.swangim * {
+    font-size: 14px;
+}
+
 window#waybar {
     background-color: transparent;
     color: @foreground;
     transition-property: background-color;
     transition-duration: .5s;
-	border-radius: 0 0 16px 16px;
+    border-radius: 0 0 16px 16px;
 }
 
 #mpris,
@@ -35,34 +41,36 @@ window#waybar {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
     color: @forground;
 }
-
 
 tooltip * {
     background: transparent;
     background-image: none;
     box-shadow: none;
 }
-
 tooltip {
     background-color: @color3;
-    color: @color8;
-	border-radius: 15px;
+    color: @background;
+	border-radius: 1em;
 }
-
 
 #left{
     border-radius: 0 16px 16px 16px;
     background-color: @color3;
-	margin-right: 20px;
+	margin-right: 1.6em;
 	padding-right: 40px;
 }
 #workspaces button label {
-    font-size: 18px;
+    font-size: 1.5em;
 }
+
+
+/* i am here */
+
+
 #workspaces{
 	border-style: solid;
 	border-width: 0px;
@@ -87,7 +95,7 @@ tooltip {
 
 
 #sound{
-    margin: 0 20px 0 20px;
+    margin: 0 1.6em 0 1.6em;
 	background-color: @background;
 	border-radius: 0 0 16px 16px;
 	border-left: 2px solid;
@@ -96,7 +104,7 @@ tooltip {
 	border-color: @color3;
 }
 #connection{
-    margin: 0 20px 0 20px;
+    margin: 0 1.6em 0 1.6em;
 	background-color: @background;
 	border-radius: 0 0 16px 16px;
 	border-left: 2px solid;
@@ -105,7 +113,7 @@ tooltip {
 	border-color: @color3;
 }
 #right{
-    margin-left: 20px;
+    margin-left: 1.6em;
 	background-color: @color3;
 	border-radius: 16px 0 16px 16px;
 }
@@ -119,7 +127,7 @@ tooltip {
 #custom-updates{
     color: @background;
 	padding-left: 10px;
-	padding-right: 10px;
+	padding-right: 0.8em;
 
 }
 
@@ -135,18 +143,18 @@ window#waybar.empty #window{
 }
 
 #mpris{
-    margin: 0 2px 0 2px;
+    margin: 0 0.15em 0 0.15em;
 	background-color: @background;
 	border-radius: 0 0 16px 16px;
 	border-left: 2px solid;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
 	border-color: @color3;
-	min-width: 200px;
+	min-width: 16.5em;
 	
 }
 #custom-arabe_clock {
-	font-size: 20px;
+	font-size: 1.6em;
 	letter-spacing: 5px;
 	padding: 0 10px 0 10px;
 	border-radius: 0 0 16px 16px;
@@ -171,3 +179,9 @@ window#waybar.empty #window{
 	border-bottom: 2px solid;
 	border-color: @color3;
 }
+#battery{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: @background;
+}
+

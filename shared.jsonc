@@ -191,12 +191,5 @@
     ],
     "modules-center": [
         "custom/arabe_clock"
-    ],
-    "modules-right": [
-        "mpris",
-        "group/sound",
-        "group/connection",
-        "group/pri_tray",
-        "group/right"
     ]
 }

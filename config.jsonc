@@ -19,18 +19,18 @@
     },
     "memory": {
         "interval": 30,
-            //"states": { 
-            //	"l": 30, //medium
-            //	"m": 60, //high
-            //	"c": 90  //critical 
-            //},
-            "format": "RAM {percentage}%",
-            //"format-l": "   {percentage}%",
-            //"format-m": "   {percentage}%",
-            //"format-c": "   {percentage}%"
-            //"format-alt": " {used:0.1f}Gb",
-            "tooltip": true,
-            "tooltip-format": "  {used:0.1f}/{total:0.1f}Gb \n  {swapUsed:0.1f}/{swapTotal:0.1f}Gb"
+        //"states": { 
+        //	"l": 30, //medium
+        //	"m": 60, //high
+        //	"c": 90  //critical 
+        //},
+        "format": "RAM {percentage}%",
+        //"format-l": "   {percentage}%",
+        //"format-m": "   {percentage}%",
+        //"format-c": "   {percentage}%"
+        //"format-alt": " {used:0.1f}Gb",
+        "tooltip": true,
+        "tooltip-format": "  {used:0.1f}/{total:0.1f}Gb \n  {swapUsed:0.1f}/{swapTotal:0.1f}Gb"
     },
     "hyprland/workspaces": {
         "persistent-workspaces": {
@@ -77,7 +77,14 @@
             "custom/updates" //pacman update
         ],
         "orientation": "horizontal"
-    }
+    },
+    "modules-right": [
+        "mpris",
+        "group/sound",
+        "group/connection",
+        "group/pri_tray",
+        "group/right"
+    ]
 }, 
 
 {
@@ -118,32 +125,21 @@
             "*": 4 // 5 workspaces by default on every monitor
         }
     },
-    "privacy": {
-        "icon-spacing": 10,
-        "icon-size": 13,
-        "transition-duration": 250,
-        "modules": [
-            {
-                "type": "screenshare",
-                "tooltip": true,
-                "tooltip-icon-size": 16
-            },
-                //{
-                //	"type": "audio-out",
-                //	"tooltip": true,
-                //	"tooltip-icon-size": 24
-                //},
-                {
-                    "type": "audio-in",
-                    "tooltip": true,
-                    "tooltip-icon-size": 16
-                }
-        ]
-    },
-    "tray":{
-        "icon-size": 13,
-        "spacing": 10
-    },
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["󰂃", "󱊡", "󱊢", "󱊣"],
+        "max-length": 25,
+        "format-charging": "{capacity}% 󰂄",
+
+        "tooltip": true,
+        "tooltip-format": "Power: {power} W\n{timeTo}\nHealth: {health}%"
+    },	
     "group/left":{
         "modules": [
             "custom/updates", //pacman update
@@ -160,19 +156,10 @@
         ],
         "orientation": "horizontal"
     },
-    "battery": {
-        "bat": "BAT0",
-        "interval": 60,
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-icons": ["󰂃", "󱊡", "󱊢", "󱊣"],
-        "max-length": 25,
-        "format-charging": "{capacity}% 󰂄",
-
-        "tooltip": true,
-        "tooltip-format": "Power: {power} W\n{timeTo}\nHealth: {health}%"
-    }	
+    "modules-right": [
+        "mpris",
+        "group/sound",
+        "group/connection",
+        "group/right"
+    ]
 }]
