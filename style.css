@@ -83,20 +83,23 @@ tooltip {
 	border-color: @color3;
 	border-radius: 1.3em;
 	background-color: @background;
-		
 }
 #workspaces button {
     background-color: transparent;
 	color: @foreground;
 	border-radius: 1.3em;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+    outline: none;
 }
 #workspaces button:hover {
     background-color: transparent;
-
 }
 #workspaces button.active{
 	color: @background;
     background-color: @color3;
+	border-radius: 1.3em;
 }
 
 
@@ -139,7 +142,7 @@ tooltip {
 
 #window{
     background-color: @color3;
-	border-radius: 0 1.3em 1.3em 0;
+	border-radius: 0 1.4em 1.3em 0;
 	padding-left: 5px;
 	padding-right: 5px;
 	color: @background;
