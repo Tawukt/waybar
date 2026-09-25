@@ -32,11 +32,11 @@
         "tooltip": true,
         "tooltip-format": "  {used:0.1f}/{total:0.1f}Gb \n  {swapUsed:0.1f}/{swapTotal:0.1f}Gb"
     },
-    "hyprland/workspaces": {
-        "persistent-workspaces": {
-            "*": 5 // 5 workspaces by default on every monitor
-        }
-    },
+    //"hyprland/workspaces": {
+    //    "persistent-workspaces": {
+    //        "*": 5 // 5 workspaces by default on every monitor
+    //    }
+    //},
     "privacy": {
         "icon-spacing": 10,
         "icon-size": 18,
@@ -120,11 +120,11 @@
         "tooltip": true,
         "tooltip-format": "  {used:0.1f}/{total:0.1f}Gb \n  {swapUsed:0.1f}/{swapTotal:0.1f}Gb"
     },
-    "hyprland/workspaces": {
-        "persistent-workspaces": {
-            "*": 4 // 5 workspaces by default on every monitor
-        }
-    },
+    //"hyprland/workspaces": {
+    //    "persistent-workspaces": {
+    //        "*": 4 // 5 workspaces by default on every monitor
+    //    }
+    //},
     "battery": {
         "bat": "BAT0",
         "interval": 60,
