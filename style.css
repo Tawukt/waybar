@@ -18,7 +18,7 @@ window#waybar {
     color: @foreground;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 1.3em 1.3em;
 }
 
 #mpris,
@@ -58,31 +58,37 @@ tooltip {
 }
 
 #left{
-    border-radius: 0 16px 16px 16px;
+    border-radius: 0 1.3em 1.3em 1.3em;
     background-color: @color3;
 	margin-right: 1.6em;
 	padding-right: 40px;
 }
+
+#workspaces,
+#workspaces button,
+#workspaces button label {
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #workspaces button label {
     font-size: 1.5em;
 }
-
-
-/* i am here */
-
-
 #workspaces{
 	border-style: solid;
 	border-width: 0px;
 	border-color: @color3;
-	border-radius: 16px;
+	border-radius: 1.3em;
 	background-color: @background;
 		
 }
 #workspaces button {
     background-color: transparent;
 	color: @foreground;
-	border-radius: 16px;
+	border-radius: 1.3em;
 }
 #workspaces button:hover {
     background-color: transparent;
@@ -97,7 +103,7 @@ tooltip {
 #sound{
     margin: 0 1.6em 0 1.6em;
 	background-color: @background;
-	border-radius: 0 0 16px 16px;
+	border-radius: 0 0 1.3em 1.3em;
 	border-left: 2px solid;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
@@ -106,7 +112,7 @@ tooltip {
 #connection{
     margin: 0 1.6em 0 1.6em;
 	background-color: @background;
-	border-radius: 0 0 16px 16px;
+	border-radius: 0 0 1.3em 1.3em;
 	border-left: 2px solid;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
@@ -115,14 +121,14 @@ tooltip {
 #right{
     margin-left: 1.6em;
 	background-color: @color3;
-	border-radius: 16px 0 16px 16px;
+	border-radius: 1.3em 0 1.3em 1.3em;
 }
 #sys{
     background-color: @background;
 	border-style: solid;
 	border-width: 2px;
 	border-color: @color3;
-	border-radius: 16px;
+	border-radius: 1.3em;
 }
 #custom-updates{
     color: @background;
@@ -133,7 +139,7 @@ tooltip {
 
 #window{
     background-color: @color3;
-	border-radius: 0 16px 16px 0;
+	border-radius: 0 1.3em 1.3em 0;
 	padding-left: 5px;
 	padding-right: 5px;
 	color: @background;
@@ -145,7 +151,7 @@ window#waybar.empty #window{
 #mpris{
     margin: 0 0.15em 0 0.15em;
 	background-color: @background;
-	border-radius: 0 0 16px 16px;
+	border-radius: 0 0 1.3em 1.3em;
 	border-left: 2px solid;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
@@ -157,7 +163,7 @@ window#waybar.empty #window{
 	font-size: 1.5em;
 	letter-spacing: 5px;
 	padding: 0 10px 0 10px;
-	border-radius: 0 0 16px 16px;
+	border-radius: 0 0 0.9em 0.9em;
 	background-color: @background;
 	border-left: 2px solid;
 	border-right: 2px solid;
@@ -173,7 +179,7 @@ window#waybar.empty #window{
 #pri_tray {
     margin: 0 10px 0 10px;
 	background-color: @background;
-	border-radius: 0 0 16px 16px;
+	border-radius: 0 0 1.3em 1.3em;
 	border-left: 2px solid;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
