@@ -83,9 +83,9 @@
 	},
 	"network":{
 			"format-ethernet": "󰈀 {ifname}",
-			"format-wifi": "{icon} {ipaddr}/{cidr}",
+			"format-wifi": "{icon}",
 			"format-disconnected": "󰖪",
-			"tooltip-format-wifi": "SSID: {essid}\nInterface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}\nSubnet: {netmask}\nSignal strength: {signalStrength}%\n\n󰶣{bandwidthUpBytes} 󰶡{bandwidthDownBytes}",
+			"tooltip-format-wifi": "SSID: {essid}\nInterface: {ifname}/{cidr}\nIP: {ipaddr}\nGateway: {gwaddr}\nSubnet: {netmask}\nSignal strength: {signalStrength}%\n\n󰶣{bandwidthUpBytes} 󰶡{bandwidthDownBytes}",
 			"tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}\nSubnet: {netmask}\n\n {bandwidthUpBytes}\t {bandwidthDownBytes}",
 			"tooltip-format-disconnected": "Disconnected",
 			"format-icons": ["󰤫","󰤟","󰤢","󰤥","󰤨"],
@@ -95,7 +95,7 @@
 	},
 	"custom/wireguard":{
 		"format": "{}",
-		"exec": "${XDG_CONFIG_HOME}/waybar/scripts/wireguard.sh",
+		"exec": "${XDG_CONFIG_HOME}/waybar/scripts/wireguard.sh short",
 		//"on-click": "rofi -modi 'WireGuard:~/.config/waybar/wireguard-rofi-waybar/wireguard-rofi.sh' -show WireGuard",
 		"interval": 60,
 		"return-type": "json"
